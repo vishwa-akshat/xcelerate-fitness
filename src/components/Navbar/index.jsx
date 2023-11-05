@@ -1,3 +1,5 @@
+import MenuIcon from "../../assets/menu.svg";
+
 import "./navbar.scss";
 
 export default function Navbar() {
@@ -18,6 +20,7 @@ export default function Navbar() {
                     Contact
                 </a>
             </div>
+            <img src={MenuIcon} alt="menu" className="menu-icon" />
         </div>
     );
 }

@@ -1,0 +1,192 @@
+.hero-container {
+    margin: 40px 0;
+    background: #fff;
+    border-radius: 45px;
+    padding: 40px;
+
+    .sub-heading {
+        color: #073a87;
+        font-size: clamp(12px, 2vw, 25px);
+        line-height: 120%;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 18px;
+        margin: 0;
+        border-bottom: 1px solid #064bb4;
+    }
+
+    .heading-content-wrapper {
+        color: #073a87;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        .hero-heading-wrapper {
+            max-width: 780px;
+            width: 52vw;
+            position: relative;
+
+            .hero-heading {
+                margin: 0;
+                font-size: clamp(28px, 6.5vw, 95px);
+                font-weight: 700;
+                line-height: clamp(30px, 7vw, 107px);
+                text-transform: uppercase;
+            }
+
+            .heading-extra-info {
+                position: absolute;
+                color: rgba(7, 58, 135, 0.75);
+                font-family: Montserrat;
+                font-size: clamp(6px, 1vw, 16px);
+                font-weight: 600;
+                line-height: clamp(8px, 1.5vw, 23px);
+                text-transform: capitalize;
+                max-width: 316px;
+                width: 19.5vw;
+                right: 0;
+                bottom: 3%;
+            }
+
+            .bicep-image {
+                position: absolute;
+                right: 9%;
+                top: 20px;
+                max-width: 70px;
+                max-height: 70px;
+                width: 5vw;
+            }
+        }
+
+        .hero-side-wrapper {
+            margin-right: 6%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .free-pass-block {
+                max-width: 255px;
+                max-height: 65px;
+                width: 20vw;
+                height: 15vw;
+                border-radius: 40px;
+                background: #7bcb0a;
+                color: #fff;
+                font-family: Oswald;
+                font-size: clamp(18px, 2vw, 26px);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 23px; /* 88.462% */
+                letter-spacing: 2.6px;
+                text-transform: uppercase;
+                border: none;
+                outline: none;
+            }
+
+            .astek-img {
+                margin-top: 12%;
+                max-width: 150px;
+                max-height: 150px;
+                width: 12vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        .sub-heading {
+        }
+
+        .heading-content-wrapper {
+            flex-direction: column;
+
+            .hero-heading-wrapper {
+                width: 100%;
+
+                .hero-heading {
+                    width: 80%;
+                }
+
+                .heading-extra-info {
+                    width: 20vw;
+                    bottom: 3%;
+                }
+
+                .bicep-image {
+                    right: 9%;
+                    top: 10px;
+                }
+            }
+
+            .hero-side-wrapper {
+                width: 100%;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 30px;
+                gap: 50px;
+
+                .free-pass-block {
+                    width: 35vw;
+                    height: 15vw;
+                    font-size: clamp(18px, 3vw, 26px);
+                }
+
+                .astek-img {
+                    margin-top: 0;
+                    width: 10vw;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 525px) {
+    .hero-container {
+        margin: 25px 0;
+        border-radius: 25px;
+        padding: 25px 20px;
+
+        .sub-heading {
+            font-size: clamp(14px, 2vw, 25px);
+            padding-bottom: 12px;
+        }
+
+        .heading-content-wrapper {
+            .hero-heading-wrapper {
+                width: 100%;
+
+                .hero-heading {
+                    width: 80%;
+                }
+
+                .heading-extra-info {
+                    width: 22vw;
+                }
+
+                .bicep-image {
+                    right: 9%;
+                    top: 10px;
+                    width: 8vw;
+                }
+            }
+
+            .hero-side-wrapper {
+                margin-top: 20px;
+                gap: 40px;
+
+                .free-pass-block {
+                    width: 150px;
+                    height: 42px;
+                    font-size: 14px;
+                }
+
+                .astek-img {
+                    margin-top: 0;
+                    width: 12vw;
+                }
+            }
+        }
+    }
+}
