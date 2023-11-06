@@ -92,6 +92,129 @@
             }
         }
     }
+    .hero-part2-wrapper {
+        display: flex;
+        gap: 30px;
+        margin-top: 40px;
+
+        .image-part1-wrapper {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .image-small-wrapper {
+                position: relative;
+
+                .image-1 {
+                    width: 100%;
+                    border-radius: 30px;
+                }
+
+                .overlay-text {
+                    position: absolute;
+                    color: #fff;
+                    font-family: Oswald;
+                    font-size: clamp(15px, 1.8vw, 23px);
+                    font-weight: 500;
+                    line-height: clamp(15px, 1.8vw, 23px);
+                    letter-spacing: 2.3px;
+                    text-transform: uppercase;
+                    background: #064bb4;
+                    text-align: center;
+                    padding: 24px 0;
+                    border-radius: 0 0 30px 30px;
+                    left: 0;
+                    right: 0;
+                    bottom: 5px;
+                }
+            }
+
+            .info-wrapper {
+                display: flex;
+                margin-bottom: clamp(10px, 2.5vw, 40px);
+
+                .smiley-wrapper {
+                    background: #064bb4;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: clamp(50px, 3vw, 65px);
+                    height: clamp(50px, 3vw, 65px);
+
+                    .smiley {
+                        width: clamp(30px, 2vw, 45px);
+                        height: clamp(30px, 2vw, 45px);
+                    }
+                }
+
+                .customer-number {
+                    background: #7bcb0a;
+                    color: #fff;
+                    font-family: Oswald;
+                    font-size: clamp(10px, 1.2vw, 20px);
+                    font-weight: 600;
+                    line-height: 25px; /* 125% */
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    border-radius: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 4;
+                }
+
+                .happy-customer {
+                    background: #064bb4;
+                    flex-grow: 2;
+                    color: #fff;
+                    font-family: Oswald;
+                    font-size: clamp(10px, 1.2vw, 18px);
+                    font-weight: 600;
+                    line-height: 25px; /* 125% */
+                    letter-spacing: 0.6px;
+                    text-transform: uppercase;
+                    border-radius: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .image-large-wrapper {
+            width: 67%;
+            position: relative;
+
+            .image-2 {
+                width: 100%;
+                border-radius: 30px;
+            }
+
+            .overlay-content {
+                position: absolute;
+                font-family: Oswald;
+                font-size: clamp(25px, 3vw, 50px);
+                font-weight: 700;
+                line-height: clamp(25px, 3vw, 50px); /* 100% */
+                text-transform: uppercase;
+                bottom: clamp(10px, 4.5vw, 50px);
+                left: clamp(10px, 3vw, 40px);
+
+                .text-1 {
+                    color: rgba(255, 255, 255, 0.4);
+                    margin-bottom: clamp(10px, 1vw, 18px);
+                }
+                .text-2 {
+                    color: #fff;
+                    margin-bottom: clamp(10px, 1vw, 18px);
+                }
+                .text-3 {
+                    color: rgba(255, 255, 255, 0.7);
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 900px) {
@@ -121,22 +244,64 @@
             }
 
             .hero-side-wrapper {
-                width: 100%;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                margin-top: 30px;
-                gap: 50px;
+                display: none;
+            }
+        }
 
-                .free-pass-block {
-                    width: 35vw;
-                    height: 15vw;
-                    font-size: clamp(18px, 3vw, 26px);
+        .hero-part2-wrapper {
+            flex-direction: column-reverse;
+            gap: 20px;
+            margin-top: 20px;
+
+            .image-part1-wrapper {
+                width: 100%;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .image-small-wrapper {
+                    display: none;
                 }
 
-                .astek-img {
-                    margin-top: 0;
-                    width: 10vw;
+                .info-wrapper {
+                    display: flex;
+                    gap: 40px;
+                    margin-bottom: 10px;
+
+                    .smiley-wrapper {
+                    }
+
+                    .customer-number {
+                        font-size: 15px;
+                        flex-grow: 2;
+                    }
+
+                    .happy-customer {
+                        flex-grow: 2;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .image-large-wrapper {
+                width: 100%;
+
+                .image-2 {
+                    border-radius: 0;
+                }
+
+                .overlay-content {
+                    font-size: clamp(30px, 3vw, 50px);
+                    line-height: clamp(30px, 3vw, 50px); /* 100% */
+                    bottom: clamp(30px, 4.5vw, 50px);
+                    left: clamp(30px, 3vw, 40px);
+
+                    .text-1 {
+                        margin-bottom: clamp(18px, 1vw, 22px);
+                    }
+                    .text-2 {
+                        margin-bottom: clamp(18px, 1vw, 22px);
+                    }
+                    .text-3 {
+                    }
                 }
             }
         }
@@ -154,6 +319,7 @@
         }
 
         .heading-content-wrapper {
+            margin-top: 15px;
             .hero-heading-wrapper {
                 width: 100%;
 
@@ -185,6 +351,61 @@
                 .astek-img {
                     margin-top: 0;
                     width: 12vw;
+                }
+            }
+        }
+
+        .hero-part2-wrapper {
+            .image-part1-wrapper {
+                .image-small-wrapper {
+                }
+
+                .info-wrapper {
+                    gap: 10px;
+                    margin-bottom: 0;
+
+                    .smiley-wrapper {
+                        width: 40px;
+                        height: 40px;
+
+                        .smiley {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+
+                    .customer-number {
+                        font-size: 12px;
+                        flex-grow: 2;
+                    }
+
+                    .happy-customer {
+                        flex-grow: 2;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .image-large-wrapper {
+                width: 100%;
+
+                .image-2 {
+                    border-radius: 0;
+                }
+
+                .overlay-content {
+                    font-size: clamp(18px, 3vw, 25px);
+                    line-height: clamp(18px, 3vw, 50px); /* 100% */
+                    bottom: clamp(20px, 4.5vw, 35px);
+                    left: clamp(20px, 3vw, 32px);
+
+                    .text-1 {
+                        margin-bottom: clamp(10px, 1vw, 22px);
+                    }
+                    .text-2 {
+                        margin-bottom: clamp(10px, 1vw, 22px);
+                    }
+                    .text-3 {
+                    }
                 }
             }
         }
